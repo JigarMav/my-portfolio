@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { Sidebar } from "./Sidebar.tsx";
 import { Footer } from "./Footer.tsx";
-import { DarkModeProvider } from "../../context/DarkModeContext";
+// import { DarkModeProvider } from "../../context/DarkModeContext";
 
 interface LayoutProps {
   children: ReactNode;

@@ -3,7 +3,7 @@ import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePortfolioConfig } from "../../hooks/usePortfolioConfig.tsx";
 import { FaArrowRight } from "react-icons/fa6";
-import { useDarkMode } from "../../context/DarkModeContext";
+// import { useDarkMode } from "../../context/DarkModeContext";
 
 // @ts-ignore
 import { Link } from 'react-scroll';  // Importing Link component from react-scroll
