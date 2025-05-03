@@ -1,82 +1,112 @@
 {
   "personal": {
-    "name": "John Doe",
-    "role": "Full Stack Developer",
-    "description": "I build exceptional and accessible digital experiences for the web.",
+    "name": "Jigar",
+    "role": "Full Stack Engineer",
+    "description": "I get things done.",
     "avatar": "/avatar.jpg",
-    "location": "New York, USA",
-    "email": "john@example.com",
+    "location": "Mumbai, India",
+    "email": "jbhanushali237@gmail.com",
     "socials": [
       {
         "platform": "GitHub",
-        "url": "https://github.com/johndoe"
+        "url": "https://github.com/JigarMav"
       },
       {
         "platform": "LinkedIn",
-        "url": "https://linkedin.com/in/johndoe"
+        "url": "https://www.linkedin.com/in/jmav99/"
       }
     ]
   },
   "about": {
     "title": "About Me",
-    "description": "With a passion for both technology and design, I develop scalable, high-performance applications that captivate users and drive success.",
-    "resume": "/resume.pdf"
+    "description": "Senior Full-Stack Engineer specializing in scalable distributed systems. Tech agnostic with expertise in building high-performance applications",
+    "resume": "/jigarMav_RESUME_LATEST_April25.pdf"
   },
   "projects": [
     {
       "title": "Project One",
       "description": "A brief description of your project. This project demonstrates how to build a simple web application using React and TypeScript.",
-      "tags": ["React", "TypeScript", "TailwindCSS"],
+      "tags": [
+        "React",
+        "TypeScript",
+        "TailwindCSS"
+      ],
       "image": "https://placehold.co/600x400?text=Project+One",
       "url": "https://project1.com",
       "github": "https://github.com/username/project1"
     }
   ],
   "skills": [
-    { "name": "React" },
-    { "name": "Node.js" },
-    { "name": "Python" },
-    { "name": "Java" },
-    { "name": "JavaScript" },
-    { "name": "HTML" },
-    { "name": "CSS" },
-    { "name": "Git" },
-    { "name": "Figma" },
-    { "name": "Sketch" },
-    { "name": "Adobe XD" }
+    {
+      "name": "React"
+    },
+    {
+      "name": "Java"
+    },
+    {
+      "name": "JavaScript"
+    },
+    {
+      "name": "Spring Boot"
+    },
+    {
+      "name": "NextJs"
+    },
+    {
+      "name": "Kafka"
+    },
+    {
+      "name": "Node.js"
+    },
+    {
+      "name": "Apache Spark"
+    },
+    {
+      "name": "MongoDB"
+    },
+    {
+      "name": "Redis"
+    },
+    {
+      "name": "Docker"
+    }
   ],
   "experience": [
     {
-      "company": "Health Pulse Connect",
-      "role": "Frontend Developer Intern",
-      "startDate": "May 2024",
-      "endDate": "June 2024",
+      "company": "Morgan Stanley",
+      "role": "Senior Full-stack Engineer",
+      "startDate": "Dec 2022",
+      "endDate": "Present",
       "responsibilities": [
-        "Developed and maintained a health sector startup, implementing real-time chat and video call features with WebSockets.",
-        "Used Redux for state management and API integration, improving application performance.",
-        "Enhanced the web app's UI for a better user experience."
+        "Built a **firmwide generic rules engine** for config-driven rule lifecycle management across business domains.",
+        "Implemented **Data Quality Engine**, **Recon Engine**, and **Angular-based Rules UI** with versioning and automated SDLC support.",
+        "Developed a **Spark-based impact analysis service** to validate rules across 85M+ securities.",
+        "Introduced a **RAG-based GenAI rules butler** for rule searching, test creation, and coverage checks using GPT-4 and ChromaDB.",
+        "Optimized Kafka for message prioritization, ensuring minimal delay for critical workflows.",
+        "Designed an **event-driven metadata store** serving 50+ teams using MongoDB, Airflow, and Kafka.",
+        "Enhanced data enrichment pipelines to process **100M+ records daily** and implemented blue-green deployments."
       ]
     },
     {
-      "company": "Tech Innovations Inc.",
+      "company": "Accolite Digital Pvt Ltd (Contract: Morgan Stanley)",
+      "role": "Software Engineer",
+      "startDate": "June 2021",
+      "endDate": "Dec 2022",
+      "responsibilities": [
+        "Migrated legacy systems to Kafka, boosting processing throughput from 1.5K/s to 20K/s.",
+        "Redesigned exception workflows with **last-write-wins**, versioning, and Kafka partition optimization.",
+        "Introduced exception suppression/batching to reduce L2 support overhead.",
+        "Optimized bulk exception search API, improving response time by **300%**."
+      ]
+    },
+    {
+      "company": "GMoney Solutions Pvt Ltd",
       "role": "Software Engineer Intern",
-      "startDate": "June 2023",
-      "endDate": "August 2023",
+      "startDate": "March 2019",
+      "endDate": "Jan 2020",
       "responsibilities": [
-        "Collaborated with the backend team to integrate APIs into the frontend using React.",
-        "Improved the scalability of the product by optimizing React component rendering.",
-        "Implemented automated unit tests using Jest to ensure the robustness of the application."
-      ]
-    },
-    {
-      "company": "Creative Solutions Ltd.",
-      "role": "UI/UX Designer Intern",
-      "startDate": "January 2023",
-      "endDate": "April 2023",
-      "responsibilities": [
-        "Designed user-friendly interfaces for mobile and web applications using Figma.",
-        "Collaborated with the development team to ensure smooth handoff and implementation of designs.",
-        "Conducted user research and usability testing to improve the overall user experience."
+        "Developed a Django backend and React.js frontend for loan risk profiling.",
+        "Used NLP to extract and analyze client data from documents."
       ]
     }
   ]
