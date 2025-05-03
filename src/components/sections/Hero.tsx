@@ -161,7 +161,7 @@ const Hero = () => {
           animate={{ y: [0, -10, 0] }}
         >
           <motion.div
-            className="relative mt-4 md:mt-12 bg-gradient-to-br from-white to-primary-100  p-6 rounded-lg shadow-lg border-2 border-primary-100 dark:border-primary-700 dark:hover:border-primary-700 hover:border-primary-300  transition-all duration-300"
+            className="relative mt-4 md:mt-12 bg-gradient-to-br from-white to-primary-100 dark:from-gray-800 dark:to-gray-900 p-6 rounded-lg shadow-lg border-2 border-primary-100 dark:border-gray-700 dark:hover:border-gray-600 hover:border-primary-300 transition-all duration-300"
             variants={itemVariants}
           >
             <motion.h2 className="text-xl md:text-3xl font-bold font-title text-primary-900 mb-4 dark:text-gray-100 dark:hover:text-gray-200">
