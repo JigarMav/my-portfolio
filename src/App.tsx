@@ -6,6 +6,7 @@ import Projects from "./components/sections/Projects.tsx";
 import Skills from "./components/sections/Skills.tsx";
 import Experience from "./components/sections/Experience.tsx";
 import {useLayoutEffect} from "react";
+import { DarkModeProvider } from "./context/DarkModeContext";
 
 function App() {
     const {personal} = usePortfolioConfig()
@@ -15,12 +16,14 @@ function App() {
     },[personal])
 
   return (
-    <Layout>
+    <DarkModeProvider>
+      <Layout>
         <Hero />
+        <Experience />
         <Projects />
         <Skills />
-        <Experience />
-    </Layout>
+      </Layout>
+    </DarkModeProvider>
   );
 }
 

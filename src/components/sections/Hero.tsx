@@ -42,7 +42,7 @@ const Hero = () => {
   return (
     <section
       id={"hero"}
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-primary-100 to-white relative overflow-hidden px-4 sm:px-6 lg:px-8"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-primary-100 dark:from-gray-800 to-white dark:to-gray-900 relative overflow-hidden px-4 sm:px-6 lg:px-8 text-white dark:text-gray-100"
     >
       <ParallaxBackground />
       <motion.div
@@ -53,19 +53,19 @@ const Hero = () => {
       >
         <motion.div className="text-center sm:text-left">
           <motion.h1
-            className="hero-title text-5xl sm:text-6xl md:text-7xl lg:text-7xl mb-4 font-bold text-primary-900"
+            className="hero-title text-5xl sm:text-6xl md:text-7xl lg:text-7xl mb-4 font-bold text-primary-900 dark:text-gray-100"
             variants={itemVariants}
           >
             {personal.name}
           </motion.h1>
           <motion.p
-            className="section-title text-xl sm:text-2xl text-primary-600 mb-6"
+            className="section-title text-xl sm:text-2xl text-primary-600 mb-6 dark:text-gray-300"
             variants={itemVariants}
           >
             {personal.role}
           </motion.p>
           <motion.p
-            className="body-text text-base sm:text-lg text-primary-700 mb-8 max-w-2xl mx-auto sm:mx-0"
+            className="body-text text-base sm:text-lg text-primary-700 mb-8 max-w-2xl mx-auto sm:mx-0 dark:text-gray-300"
             variants={itemVariants}
           >
             {personal.description}
@@ -155,19 +155,20 @@ const Hero = () => {
             ))}
           </motion.div>
         </motion.div>
+
         <motion.div
           className="flex flex-col justify-center items-center relative"
           animate={{ y: [0, -10, 0] }}
         >
           <motion.div
-            className="relative mt-4 md:mt-12 bg-gradient-to-br from-white to-primary-100  p-6 rounded-lg shadow-lg border-2 border-primary-100 hover:border-primary-300  transition-all duration-300"
+            className="relative mt-4 md:mt-12 bg-gradient-to-br from-white to-primary-100  p-6 rounded-lg shadow-lg border-2 border-primary-100 dark:border-primary-700 dark:hover:border-primary-700 hover:border-primary-300  transition-all duration-300"
             variants={itemVariants}
           >
-            <h2 className="text-xl md:text-3xl font-bold font-title text-primary-900 mb-4">
+            <motion.h2 className="text-xl md:text-3xl font-bold font-title text-primary-900 mb-4 dark:text-gray-100 dark:hover:text-gray-200">
               {about.title}
-            </h2>
+            </motion.h2>
             <motion.p
-              className="text-primary-600 font-medium text-base md:text-lg mb-6"
+              className="text-primary-600 font-medium text-base md:text-lg mb-6 dark:text-gray-100 dark:hover:text-gray-200"
               variants={itemVariants}
             >
               <a
@@ -183,14 +184,14 @@ const Hero = () => {
 
             {/* Location Section */}
             <motion.p
-              className="text-primary-600 font-medium text-base md:text-lg mb-6 flex items-center space-x-2"
+              className="text-primary-600 font-medium text-base md:text-lg mb-6 flex items-center space-x-2 dark:text-gray-100 dark:hover:text-gray-200"
               variants={itemVariants}
             >
               <FaMapPin size={20} className="transition-all duration-300" />
               <span>{personal.location}</span>
             </motion.p>
 
-            <p className="text-primary-700 text-base leading-relaxed">
+            <p className="text-primary-700 text-base leading-relaxed dark:text-gray-200">
               {about.description}
             </p>
           </motion.div>

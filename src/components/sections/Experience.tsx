@@ -45,7 +45,7 @@ const Experience: React.FC = () => {
   return (
     <section
       id="experience"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-primary-100 to-white relative overflow-hidden py-20"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-b from-primary-100 dark:from-gray-800 to-white dark:to-gray-900 relative overflow-hidden py-20"
     >
       <ParallaxBackground />
       <div className="relative z-10 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8">
@@ -56,10 +56,10 @@ const Experience: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <h2 className="font-display text-4xl md:text-5xl font-medium tracking-tight text-primary-900 mb-4">
+          <h2 className="font-display text-4xl md:text-5xl font-medium tracking-tight text-primary-900 dark:text-white mb-4">
             Professional Experience
           </h2>
-          <p className="font-sans text-lg md:text-xl font-normal text-primary-600 tracking-normal leading-relaxed max-w-2xl mx-auto">
+          <p className="font-sans text-lg md:text-xl font-normal text-primary-600 dark:text-primary-300 tracking-normal leading-relaxed max-w-2xl mx-auto">
             My journey in the industry
           </p>
         </motion.div>
@@ -71,13 +71,14 @@ const Experience: React.FC = () => {
           viewport={{ once: true, margin: "-50px" }}
           className="relative"
         >
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-primary-300 transform md:-translate-x-px" />
+          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-px bg-primary-300 dark:bg-primary-700 transform md:-translate-x-px" />
 
           {experience.map((exp, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className={`relative bg-white/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-12 border border-primary-300
+              className={`relative bg-white/50 dark:bg-gray-800/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 mb-12 border border-primary-300 dark:border-primary-700
+                       shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary-400 dark:hover:border-primary-500
                        shadow-sm hover:shadow-md transition-all duration-300 hover:border-primary-400
                        md:w-[calc(50%-2rem)] ${
                          index % 2 === 0
@@ -96,13 +97,13 @@ const Experience: React.FC = () => {
               />
 
               <motion.div className="mb-6">
-                <h3 className="font-title text-xl md:text-2xl font-semibold text-primary-900 mb-2">
+                <h3 className="font-title text-xl md:text-2xl font-semibold text-primary-900 dark:text-white mb-2">
                   {exp.role}
                 </h3>
-                <p className="font-title text-lg font-medium text-primary-600 mb-3">
+                <p className="font-title text-lg font-medium text-primary-600 dark:text-primary-300 mb-3">
                   {exp.company}
                 </p>
-                <p className="font-sans text-sm uppercase tracking-wider font-medium text-primary-500">
+                <p className="font-sans text-sm uppercase tracking-wider font-medium text-primary-500 dark:text-primary-400">
                   {exp.startDate} - {exp.endDate}
                 </p>
               </motion.div>
@@ -115,9 +116,9 @@ const Experience: React.FC = () => {
                     className="flex items-start group"
                   >
                     <span className="inline-block w-1.5 h-1.5 rounded-full bg-primary-500 mt-2.5 mr-3 flex-shrink-0" />
-                    <p className="font-sans text-base text-primary-700 leading-relaxed font-normal">
-                      {responsibility}
-                    </p>
+                    <p className="font-sans text-base text-primary-700 dark:text-primary-300 leading-relaxed font-normal" dangerouslySetInnerHTML={{
+                      __html: responsibility.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+                    }} />
                   </motion.li>
                 ))}
               </ul>

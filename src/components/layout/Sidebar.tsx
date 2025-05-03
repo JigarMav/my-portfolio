@@ -3,6 +3,7 @@ import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePortfolioConfig } from "../../hooks/usePortfolioConfig.tsx";
 import { FaArrowRight } from "react-icons/fa6";
+import { useDarkMode } from "../../context/DarkModeContext";
 
 // @ts-ignore
 import { Link } from 'react-scroll';  // Importing Link component from react-scroll
@@ -17,6 +18,7 @@ const menuItems = [
 export const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { personal } = usePortfolioConfig();
+  // const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   const toggleSidebar = () => setIsOpen((state) => !state);
 
@@ -71,7 +73,7 @@ export const Sidebar = () => {
       <motion.button
         onClick={toggleSidebar}
         className="fixed top-4 right-4 z-[999] p-2 bg-primary-900 rounded-full shadow drop-shadow-lg
-        hover:drop-shadow-xl hover:scale-110 group
+        hover:drop-shadow-xl hover:scale-110 group dark:bg-gray-800 dark:hover:bg-gray-700
         transition-all duration-300 ease-out"
         whileHover={{
           rotate: 180,
@@ -112,7 +114,7 @@ export const Sidebar = () => {
         initial={false}
         animate={isOpen ? "open" : "closed"}
         variants={sidebarVariants}
-        className={`fixed top-0 left-0 h-full bg-white z-50 w-full 
+        className={`fixed top-0 left-0 h-full bg-white dark:bg-gray-800 z-50 w-full 
           md:w-64 md:transform-none md:opacity-100 md:pointer-events-auto md:shadow-lg px-8 py-12
           ${isOpen ? "translate-x-0" : "-translate-x-full md:translate-x-0"}`}
       >
@@ -123,14 +125,38 @@ export const Sidebar = () => {
           transition={{ delay: 0.2 }}
           className="mb-12"
         >
-          <h1 className="font-display text-3xl font-bold tracking-tight text-primary-900">
+          <h1 className="font-display text-3xl font-bold tracking-tight text-primary-900 dark:text-white">
             {personal.name}
           </h1>
-          <p className="text-primary-600 mt-2 font-title">{personal.role}</p>
+          <p className="text-primary-600 dark:text-gray-300 mt-2 font-title">{personal.role}</p>
         </motion.div>
 
+        {/* Dark Mode Toggle */}
+        {/* {TODO: Add dark mode toggle} */}
+        {/* <button
+          onClick={toggleDarkMode}
+          className="group flex items-center px-2 py-2 text-sm font-medium rounded-md dark:text-white hover:bg-primary-100 dark:hover:bg-gray-700"
+        >
+          <svg
+            className={`mr-3 h-6 w-6 text-gray-400 dark:text-gray-300 group-hover:text-gray-500 dark:group-hover:text-gray-200 ${
+              isDarkMode ? 'transform rotate-180' : ''
+            }`}
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            />
+          </svg>
+          {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+        </button> */}
+
         {/* Navigation Items */}
-        <motion.ul variants={containerVariants} className="space-y-5">
+        <motion.ul variants={containerVariants} className="space-y-1">
           {menuItems.map((item) => {
             // eslint-disable-next-line react-hooks/rules-of-hooks
             const [isHovered, setIsHovered] = useState(false);
@@ -143,11 +169,11 @@ export const Sidebar = () => {
                 className="relative cursor-pointer"
               >
                 <Link
-                    to={item.href}
-                    smooth={true}
-                    duration={500}
+                  to={item.href}
+                  smooth={true}
+                  duration={500}
                   onClick={() => setIsOpen(false)}
-                  className="block text-lg font-title text-primary-800 hover:text-white hover:font-semibold transition-all  duration-200 py-4 px-4 relative overflow-hidden"
+                  className="block text-lg font-title text-primary-800 dark:text-white hover:text-white hover:font-semibold transition-all  duration-200 py-4 px-4 relative overflow-hidden"
                 >
                   <motion.span
                     className="relative z-10 flex items-center justify-between"
@@ -166,7 +192,7 @@ export const Sidebar = () => {
                         }}
                         initial={{ scaleX: 0 }}
                         transition={{ duration: 0.4 }}
-                        className="absolute bg-white h-[2px] bottom-0 left-0 origin-left"
+                        className="absolute bg-white dark:bg-gray-300 h-[2px] bottom-0 left-0 origin-left"
                         style={{ width: "100%" }}
                       />
                     </motion.span>
