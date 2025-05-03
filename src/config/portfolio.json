@@ -24,16 +24,19 @@
   },
   "projects": [
     {
-      "title": "Project One",
-      "description": "A brief description of your project. This project demonstrates how to build a simple web application using React and TypeScript.",
+      "title": "BrainStormy",
+      "description": "Collaborative, real-time whiteboard for teams to brainstorm ideas. Packed with features such as real-time database, whiteboard from scratch with the ability to add shapes like Rectangles and Ellipses, Sticky notes, and free-hand Pencil drawing",
       "tags": [
         "React",
+        "Next.js",
+        "LiveBlocks",
+        "Clerk Auth",
         "TypeScript",
         "TailwindCSS"
       ],
-      "image": "https://placehold.co/600x400?text=Project+One",
-      "url": "https://project1.com",
-      "github": "https://github.com/username/project1"
+      "image": "/logo.svg",
+      "url": "https://github.com/JigarMav/brainstormly",
+      "github": "https://github.com/JigarMav/brainstormly"
     }
   ],
   "skills": [
@@ -93,8 +96,8 @@
       "startDate": "June 2021",
       "endDate": "Dec 2022",
       "responsibilities": [
-        "Migrated legacy systems to Kafka, boosting processing throughput from 1.5K/s to 20K/s.",
-        "Redesigned exception workflows with **last-write-wins**, versioning, and Kafka partition optimization.",
+        "Migrated legacy systems to Kafka, boosting processing throughput from **1.5K/s to 20K/s.**",
+        "Redesigned exception workflows with **last-write-wins**, **versioning**, and **Kafka partition optimization**.",
         "Introduced exception suppression/batching to reduce L2 support overhead.",
         "Optimized bulk exception search API, improving response time by **300%**."
       ]
@@ -105,8 +108,8 @@
       "startDate": "March 2019",
       "endDate": "Jan 2020",
       "responsibilities": [
-        "Developed a Django backend and React.js frontend for loan risk profiling.",
-        "Used NLP to extract and analyze client data from documents."
+        "Developed a **Django** backend and **React.js** frontend for loan risk profiling.",
+        "Used **NLP** to extract and analyze client data from documents."
       ]
     }
   ]

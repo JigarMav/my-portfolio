@@ -259,16 +259,3 @@ All components are located in the `src/components` directory. You can modify the
 ## 📄 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🙏 Acknowledgments
-
-- [React](https://reactjs.org/)
-- [Vite](https://vitejs.dev/)
-- [TailwindCSS](https://tailwindcss.com/)
-- [React Icons](https://react-icons.github.io/react-icons/)
-
----
-
-Made with ❤️ by [salehkhatri.tech](https://salehkhatri.tech)
-
-Don't forget to follow me on [Twitter](https://twitter.com/salehdotdev) for updates and web development tips!
