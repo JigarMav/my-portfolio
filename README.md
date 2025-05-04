@@ -1,4 +1,4 @@
-# 🚀 React + Vite Portfolio Template
+# 🚀 React Portfolio Template
 
 A modern, responsive portfolio template built with React, Vite, and TailwindCSS to showcase your projects, skills, and experience.
 
@@ -15,7 +15,7 @@ Before you begin, ensure you have the following installed:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/salehkhatri/portfolio_template.git
+git clone https://github.com/JigarMav/my-portfolio.git
 cd portfolio_template
 ```
 
@@ -51,9 +51,9 @@ This will start the development server at `http://localhost:5173` (or another po
 
 ### Customizing Your Portfolio
 
-All your personal information and portfolio content is managed through a single configuration file located at `src/config/portfolio.json`.
+All your personal information and portfolio content is managed through a single configuration file at `src/config/portfolio.json`.
 
-Edit this file to add your personal details, project information, skills, and work experience.
+Edit this file to add your details, project information, skills, and work experience.
 
 Here's a full example of the `portfolio.json` file:
 
@@ -250,7 +250,7 @@ export default {
 };
 ```
 
-You can further customize this configuration to match your personal brand or preferences.
+You can further customize this configuration to match your brand or preferences.
 
 ### Components
 
